@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 const util = require('util');
-const dbvar = require('../mysql-config');
 const default_result = require('../data/default_result');
 
 //returns random word

@@ -5,11 +5,11 @@ const terms = require('../data/term_bank');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var con = mysql.createConnection({
-    host: 'us-cdbr-east-06.cleardb.net',
-    user: 'b9c8094727b131',
-    password: '32226ac6',
-    database: 'heroku_6a49f4f5b429713'
+  const con = mysql.createConnection({
+    host: process.env.DBHOST,
+    user: process.env.DBUSER,
+    password: process.env.DBPASS,
+    database: process.env.DB
   })
 
   con.connect((err) => {
