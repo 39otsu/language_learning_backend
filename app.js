@@ -1,7 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
-app.use(express.static(path.join(__dirname, 'public')));
 const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
